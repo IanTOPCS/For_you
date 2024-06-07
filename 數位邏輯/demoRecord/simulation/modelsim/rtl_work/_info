@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\user\Desktop\logic\one\fa_1bit\simulation\modelsim
+vaccumulator_top
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 39Q279S<oGK]TJod89;?=3
+I9j4lZR4lBB]ZYj6PJ18X>3
+Z2 Vjh23n85AMW;KSbE`E>Lc;0
+Z3 !s105 accumulator_top_sv_unit
+S1
+Z4 dC:\Users\user\Desktop\logic\one\fa_1bit\simulation\modelsim
+Z5 w1717569026
+8../../design/accumulator_top.sv
+F../../design/accumulator_top.sv
+L0 1
+Z6 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1717580887.335000
+!s107 ../../design/accumulator_top.sv|
+!s90 -reportprogress|300|../../design/accumulator_top.sv|
+!s101 -O0
+o-O0
+vadd
+R1
+Z7 Ig=4GJOGDd`mHdbFNJ3za]1
+Z8 VF@CkokL[E;I4JJU<4UO<l0
+S1
+R4
+Z9 w1713966488
+Z10 8C:/Users/user/Desktop/logic/one/fa_1bit/design/add.sv
+Z11 FC:/Users/user/Desktop/logic/one/fa_1bit/design/add.sv
+L0 1
+R6
+r1
+31
+Z12 o-sv -work work -O0
+Z13 !s92 -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design -O0
+Z14 !s100 b96ezE7hLV;:nU`OXIG1f1
+Z15 !s105 add_sv_unit
+Z16 !s108 1717580881.759000
+Z17 !s107 C:/Users/user/Desktop/logic/one/fa_1bit/design/add.sv|
+Z18 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design|C:/Users/user/Desktop/logic/one/fa_1bit/design/add.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vadder4
+R1
+Z19 I@kVbRz4A:ofE_>h3lGGO73
+Z20 V0UfRIhY2l2U7<B7FPT:Ma1
+S1
+R4
+Z21 w1713958617
+Z22 8C:/Users/user/Desktop/logic/one/fa_1bit/design/adder4.sv
+Z23 FC:/Users/user/Desktop/logic/one/fa_1bit/design/adder4.sv
+L0 1
+R6
+r1
+31
+R12
+R13
+Z24 !s100 ib7FX>bB`0GoaBUlA@iaf2
+Z25 !s105 adder4_sv_unit
+Z26 !s108 1717580881.700000
+Z27 !s107 C:/Users/user/Desktop/logic/one/fa_1bit/design/adder4.sv|
+Z28 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design|C:/Users/user/Desktop/logic/one/fa_1bit/design/adder4.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vdff4bits
+R1
+Z29 IiV`AlDn5>U7DG>F0C2l3l0
+Z30 V;D7gb^MgKg_HX[D?E:EQn1
+S1
+R4
+Z31 w1717567072
+Z32 8C:/Users/user/Desktop/logic/one/fa_1bit/design/dff4bits.sv
+Z33 FC:/Users/user/Desktop/logic/one/fa_1bit/design/dff4bits.sv
+L0 1
+R6
+r1
+31
+R12
+R13
+Z34 !s100 h9hn7;=2gh<[Q9SoUR7Ij2
+Z35 !s105 dff4bits_sv_unit
+Z36 !s108 1717580881.855000
+Z37 !s107 C:/Users/user/Desktop/logic/one/fa_1bit/design/dff4bits.sv|
+Z38 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design|C:/Users/user/Desktop/logic/one/fa_1bit/design/dff4bits.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vDFF_pos
+R1
+Z39 I;;VLTm_E3IjFX16goiH[70
+Z40 V<Oe?ZPHIZ;2nZ3F;?F[452
+S1
+R4
+Z41 w1715151397
+Z42 8C:/Users/user/Desktop/logic/one/fa_1bit/design/DFF_pos.sv
+Z43 FC:/Users/user/Desktop/logic/one/fa_1bit/design/DFF_pos.sv
+L0 1
+R6
+r1
+31
+R12
+Z44 n@d@f@f_pos
+R13
+Z45 !s100 W6LNmlbAzS5AUgWkAkIW_3
+Z46 !s105 DFF_pos_sv_unit
+Z47 !s108 1717580881.659000
+Z48 !s107 C:/Users/user/Desktop/logic/one/fa_1bit/design/DFF_pos.sv|
+Z49 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design|C:/Users/user/Desktop/logic/one/fa_1bit/design/DFF_pos.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vstudent_num
+R1
+Z50 IFZjgC0Yg7C:Y?cP4=D9T>2
+Z51 V@aVazjJok9gB:6`6;;AD80
+S1
+R4
+Z52 w1717566707
+Z53 8C:/Users/user/Desktop/logic/one/fa_1bit/design/student_num.sv
+Z54 FC:/Users/user/Desktop/logic/one/fa_1bit/design/student_num.sv
+L0 1
+R6
+r1
+31
+R12
+R13
+Z55 !s100 3ncEMhf_kZTT1_HX3E@ke3
+Z56 !s105 student_num_sv_unit
+Z57 !s108 1717580881.815000
+Z58 !s107 C:/Users/user/Desktop/logic/one/fa_1bit/design/student_num.sv|
+Z59 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design|C:/Users/user/Desktop/logic/one/fa_1bit/design/student_num.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_accumulator_top
+R1
+Z60 IdE`K6KC1JjSLlEOLC3<A61
+Z61 V]J99PWJ2a_?;Eklc<2z7W3
+Z62 !s105 tb_accumulator_top_sv_unit
+S1
+R4
+Z63 w1717568882
+Z64 8../tb/tb_accumulator_top.sv
+Z65 F../tb/tb_accumulator_top.sv
+L0 1
+R6
+r1
+31
+o-O0
+!i10b 1
+Z66 !s100 iNeoDJFGY4GT=@Ha=gL_o0
+!s85 0
+Z67 !s108 1717580887.296000
+Z68 !s107 ../tb/tb_accumulator_top.sv|
+Z69 !s90 -reportprogress|300|../tb/tb_accumulator_top.sv|
+!s101 -O0

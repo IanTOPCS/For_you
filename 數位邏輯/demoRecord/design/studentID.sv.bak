@@ -1,0 +1,11 @@
+module studentID(
+	input clk, reset,
+	output logic [3:0]id
+);
+logic a, b, c, d, da, db, dc, dd;
+
+DFF_pos f0(
+	
+);
+
+endmodule

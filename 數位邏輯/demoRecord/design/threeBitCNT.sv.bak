@@ -1,0 +1,6 @@
+module threeBitCNT(
+	input logic clk,
+	input logic reset,
+	output logic [2:0]counter
+);
+

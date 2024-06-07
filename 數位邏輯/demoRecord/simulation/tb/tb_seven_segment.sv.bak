@@ -1,0 +1,7 @@
+module tb_seven-segment(
+	logic [3:0]in,
+	logic [6:0]out
+);
+
+seven-segment fun()
+endmodule

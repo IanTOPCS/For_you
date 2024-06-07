@@ -1,0 +1,8 @@
+module add_minus(
+	input [3:0]a,
+	input [3:0]b,
+	input m,
+	output [3:0]S,
+	output c,
+	output v
+);

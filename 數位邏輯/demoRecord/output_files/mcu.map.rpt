@@ -1,0 +1,294 @@
+Analysis & Elaboration report for mcu
+Wed Jun 05 17:47:55 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "accumulator_top:f0|adder4:f1"
+  6. Port Connectivity Checks: "accumulator_top:f0"
+  7. Analysis & Elaboration Messages
+  8. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                  ;
++------------------------------------+--------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Wed Jun 05 17:47:55 2024      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; mcu                                        ;
+; Top-level Entity Name              ; tb_accumulator_top                         ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
++------------------------------------+--------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 20     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; tb_accumulator_top ; mcu                ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "accumulator_top:f0|adder4:f1"                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "accumulator_top:f0"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Elaboration
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Jun 05 17:47:54 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mcu -c mcu --analysis_and_elaboration
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file design/freg_div_23.sv
+    Info (12023): Found entity 1: freg_div_23
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_dff_pos.sv
+    Info (12023): Found entity 1: tb_DFF_pos
+Info (12021): Found 1 design units, including 1 entities, in source file design/dff_pos.sv
+    Info (12023): Found entity 1: DFF_pos
+Info (12021): Found 1 design units, including 1 entities, in source file design/seven_segment.sv
+    Info (12023): Found entity 1: seven_segment
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_seven_segment.sv
+    Info (12023): Found entity 1: tb_seven_segment
+Info (12021): Found 1 design units, including 1 entities, in source file design/decorder.sv
+    Info (12023): Found entity 1: decorder
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_decorder.sv
+    Info (12023): Found entity 1: tb_decorder
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_mul.sv
+    Info (12023): Found entity 1: tb_mul
+Info (12021): Found 1 design units, including 1 entities, in source file design/mul.sv
+    Info (12023): Found entity 1: mul
+Info (12021): Found 1 design units, including 1 entities, in source file design/adder4.sv
+    Info (12023): Found entity 1: adder4
+Info (12021): Found 1 design units, including 1 entities, in source file design/mcu.sv
+    Info (12023): Found entity 1: mcu
+Info (12021): Found 1 design units, including 1 entities, in source file design/add.sv
+    Info (12023): Found entity 1: add
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_add.sv
+    Info (12023): Found entity 1: tb_add
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_adder4.sv
+    Info (12023): Found entity 1: tb_adder4
+Info (12021): Found 1 design units, including 1 entities, in source file design/add_minus.sv
+    Info (12023): Found entity 1: add_minus
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_add_minus.sv
+    Info (12023): Found entity 1: tb_add_minus
+Info (12021): Found 1 design units, including 1 entities, in source file design/new_decorder.sv
+    Info (12023): Found entity 1: new_decorder
+Info (12021): Found 1 design units, including 1 entities, in source file design/bcd.sv
+    Info (12023): Found entity 1: BCD
+Info (12021): Found 1 design units, including 1 entities, in source file design/bcd_show.sv
+    Info (12023): Found entity 1: BCD_show
+Info (12021): Found 1 design units, including 1 entities, in source file design/threebitcnt.sv
+    Info (12023): Found entity 1: threeBitCNT
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_threebitcnt.sv
+    Info (12023): Found entity 1: tb_threeBitCNT
+Info (12021): Found 1 design units, including 1 entities, in source file design/fourbitcnt.sv
+    Info (12023): Found entity 1: fourBitCNT
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_fourbitcnt.sv
+    Info (12023): Found entity 1: tb_fourBitCNT
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/comfourbitcnt.sv
+    Info (12023): Found entity 1: comfourbitcnt
+Info (12021): Found 1 design units, including 1 entities, in source file design/fourupdown.sv
+    Info (12023): Found entity 1: fourupdown
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_fourupdown.sv
+    Info (12023): Found entity 1: tb_fourupdown
+Info (12021): Found 1 design units, including 1 entities, in source file design/rgycombine.sv
+    Info (12023): Found entity 1: RGYcombine
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_rgbcombine.sv
+    Info (12023): Found entity 1: tb_RGBcombine
+Info (12021): Found 1 design units, including 1 entities, in source file design/unit_digit.sv
+    Info (12023): Found entity 1: unit_digit
+Info (12021): Found 1 design units, including 1 entities, in source file design/ten_digit.sv
+    Info (12023): Found entity 1: ten_digit
+Info (12021): Found 1 design units, including 1 entities, in source file design/hour_timer.sv
+    Info (12023): Found entity 1: hour_timer
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_hour_timer.sv
+    Info (12023): Found entity 1: tb_hour_timer
+Info (12021): Found 1 design units, including 1 entities, in source file design/day_timer.sv
+    Info (12023): Found entity 1: day_timer
+Info (12021): Found 1 design units, including 1 entities, in source file design/studentid.sv
+    Info (12023): Found entity 1: studentID
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_studentid.sv
+    Info (12023): Found entity 1: tb_studentID
+Info (12021): Found 1 design units, including 1 entities, in source file design/birthday.sv
+    Info (12023): Found entity 1: birthday
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_birthday.sv
+    Info (12023): Found entity 1: tb_birthday
+Info (12021): Found 1 design units, including 1 entities, in source file design/student_num.sv
+    Info (12023): Found entity 1: student_num
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_student_num.sv
+    Info (12023): Found entity 1: tb_student_num
+Info (12021): Found 1 design units, including 1 entities, in source file design/dff4bits.sv
+    Info (12023): Found entity 1: dff4bits
+Info (12021): Found 1 design units, including 1 entities, in source file design/accumulator_top.sv
+    Info (12023): Found entity 1: accumulator_top
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/tb/tb_accumulator_top.sv
+    Info (12023): Found entity 1: tb_accumulator_top
+Warning (10236): Verilog HDL Implicit Net warning at day_timer.sv(7): created implicit net for "new_reset"
+Info (12127): Elaborating entity "tb_accumulator_top" for the top level hierarchy
+Warning (10755): Verilog HDL warning at tb_accumulator_top.sv(12): assignments to clk create a combinational loop
+Warning (10175): Verilog HDL warning at tb_accumulator_top.sv(16): ignoring unsupported system task
+Info (12128): Elaborating entity "accumulator_top" for hierarchy "accumulator_top:f0"
+Info (12128): Elaborating entity "student_num" for hierarchy "accumulator_top:f0|student_num:f0"
+Info (12128): Elaborating entity "DFF_pos" for hierarchy "accumulator_top:f0|student_num:f0|DFF_pos:f0"
+Info (12128): Elaborating entity "adder4" for hierarchy "accumulator_top:f0|adder4:f1"
+Info (12128): Elaborating entity "add" for hierarchy "accumulator_top:f0|adder4:f1|add:add1"
+Info (12128): Elaborating entity "dff4bits" for hierarchy "accumulator_top:f0|dff4bits:f2"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND
+Info (144001): Generated suppressed messages file C:/Users/user/Desktop/logic/one/fa_1bit/output_files/mcu.map.smsg
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4607 megabytes
+    Info: Processing ended: Wed Jun 05 17:47:55 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/user/Desktop/logic/one/fa_1bit/output_files/mcu.map.smsg.
+
+

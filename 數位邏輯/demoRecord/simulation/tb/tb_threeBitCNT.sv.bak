@@ -1,0 +1,25 @@
+module tb_threeBitCNT;
+
+logic clk;
+logic reset;
+logic [2:0]counter;
+logic y;
+
+threeBitCNT(
+	.clk(clk),
+	.reset(reset),
+	.counter(counter),
+	.y(y)
+);
+
+always #10 clk = ~clk;
+
+initial
+begin
+	clk = 0;
+	reset = 1;
+	#10 reset = 0;
+	#500 $stop;
+end
+
+endmodule

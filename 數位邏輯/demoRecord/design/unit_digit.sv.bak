@@ -1,0 +1,11 @@
+module unit_digit(
+	input clk, reset, c_in,
+	output logic [3:0]q,
+	output logic carry_out
+);
+
+logic a, b, c, d, da, db, dc, dd;
+
+
+
+endmodule

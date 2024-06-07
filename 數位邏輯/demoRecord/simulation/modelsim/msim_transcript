@@ -1,0 +1,92 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design {C:/Users/user/Desktop/logic/one/fa_1bit/design/DFF_pos.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DFF_pos
+# 
+# Top level modules:
+# 	DFF_pos
+# vlog -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design {C:/Users/user/Desktop/logic/one/fa_1bit/design/adder4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder4
+# 
+# Top level modules:
+# 	adder4
+# vlog -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design {C:/Users/user/Desktop/logic/one/fa_1bit/design/add.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module add
+# 
+# Top level modules:
+# 	add
+# vlog -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design {C:/Users/user/Desktop/logic/one/fa_1bit/design/student_num.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module student_num
+# 
+# Top level modules:
+# 	student_num
+# vlog -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design {C:/Users/user/Desktop/logic/one/fa_1bit/design/dff4bits.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dff4bits
+# 
+# Top level modules:
+# 	dff4bits
+# vlog -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/design {C:/Users/user/Desktop/logic/one/fa_1bit/design/accumulator_top.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module accumulator_top
+# 
+# Top level modules:
+# 	accumulator_top
+# vlog -sv -work work +incdir+C:/Users/user/Desktop/logic/one/fa_1bit/simulation/tb {C:/Users/user/Desktop/logic/one/fa_1bit/simulation/tb/tb_accumulator_top.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_accumulator_top
+# 
+# Top level modules:
+# 	tb_accumulator_top
+# 
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_accumulator_top
+# 
+# Top level modules:
+# 	tb_accumulator_top
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module accumulator_top
+# 
+# Top level modules:
+# 	accumulator_top
+do sim.do
+# vsim -voptargs=+acc work.tb_accumulator_top 
+# Loading sv_std.std
+# Loading work.tb_accumulator_top
+# Loading work.accumulator_top
+# Loading work.student_num
+# Loading work.DFF_pos
+# Loading work.adder4
+# Loading work.add
+# Loading work.dff4bits
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/tb_threeBitCNT/clk'.
+# Executing ONERROR command at macro ./wave.do line 4
+# ** Error: (vish-4014) No objects found matching '/tb_threeBitCNT/reset'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/tb_threeBitCNT/counter'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** Error: (vish-4014) No objects found matching '/tb_threeBitCNT/y'.
+# Executing ONERROR command at macro ./wave.do line 7
+# Break in Module tb_accumulator_top at ../tb/tb_accumulator_top.sv line 16
+# Simulation Breakpoint: Break in Module tb_accumulator_top at ../tb/tb_accumulator_top.sv line 16
+# MACRO ./sim.do PAUSED at line 7
+add wave -position insertpoint  \
+sim:/tb_accumulator_top/clk \
+sim:/tb_accumulator_top/reset \
+sim:/tb_accumulator_top/num

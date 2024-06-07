@@ -1,0 +1,10 @@
+module tb_fourBitCNT;
+
+logic clk, reset;
+logic [3:0]counter;
+
+fourBitCNT fun(
+	.clk(clk),
+	.reset(reset),
+	.counter(counter)
+);

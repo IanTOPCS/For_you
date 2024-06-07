@@ -1,0 +1,22 @@
+module DFF_pos(
+	input logic data,
+	input logic reset,
+	input logic clk,
+	output logic q,
+	output logic qbar
+);
+
+always_ff @(posedge clk, posedge reset)
+	begin
+		if(reset)
+			begin
+				q <= 1'b0;
+				qbar <= 1'b1;
+			end
+		else
+			begin
+				q <= data;
+				qbar <= (~data);
+			end
+	end
+endmodule

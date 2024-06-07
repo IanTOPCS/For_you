@@ -1,0 +1,31 @@
+module tb_mul;
+
+input [1:0] sel;
+input [3:0] in;
+output logic ans;
+
+mul fun(
+	.sel(sel),
+	.in(in),
+	.ans(ans);
+);
+initial
+begin
+	sel = 2'b00;
+	in = 4'b0110;
+	#10
+	sel = 2'b01;
+	in = 4'b0110;
+	#10
+	sel = 2'b10;
+	in = 4'b0110;
+	#10
+	sel = 2'b11;
+	in = 4'b0110;
+end
+
+initial
+begin
+	$monitor($time, "sel1=%b, sel2=%b, out=%b", sel[1], sel[0], out);
+end
+endmodule

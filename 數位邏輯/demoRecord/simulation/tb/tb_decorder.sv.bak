@@ -1,0 +1,32 @@
+module tb_decorder;
+
+reg [2:0]in;
+wire [0:7]out;
+
+decorder fun(in, out);
+
+initial
+begin
+	in[2] = 0; in[1] = 0; in[0] = 0;
+	#10
+	in[2] = 0; in[1] = 0; in[0] = 1;
+	#10
+	in[2] = 0; in[1] = 1; in[0] = 0;
+	#10
+	in[2] = 0; in[1] = 1; in[0] = 1;
+	#10
+	in[2] = 1; in[1] = 0; in[0] = 0;
+	#10
+	in[2] = 1; in[1] = 0; in[0] = 1;
+	#10
+	in[2] = 1; in[1] = 1; in[0] = 0;
+	#10
+	in[2] = 1; in[1] = 1; in[0] = 1;
+	#10 $stop;
+end
+
+initial
+begin
+	$monitor($time, "A=%b, B=%b, C=%b, out=%b", in[2], in[1], in[0], out);
+end
+endmodule
