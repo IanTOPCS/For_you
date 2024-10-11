@@ -5,8 +5,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Decorder3to5 is
     port(
-        A, B, C:in std_logic;
-        Y:out std_logic_vector(4 downto 0)
+        A, B, C:in std_logic:='0';
+        Y:out std_logic_vector(4 downto 0):="00000"
     );
 end Decorder3to5;
 
