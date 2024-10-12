@@ -1,116 +1,96 @@
 # include <bits/stdc++.h>
 using namespace std;
 
-class myVector{                             // 手刻 vector
-public:
-    int size;                               // 單列長度
-    int lenSize;                            // 陣列列數
-    int **data;
-    int *source;
-    ~myVector();
-    myVector();
-    bool one_empty();                       // 單列是否為空
-    bool all_empty();                       // 全部列是否為空
-    void push_back_one(int);
-    void push_back_len();
-    void print_data();
-    void print_source();
-    int back_one();
-    void pop_back_one();
-};
+void perm(int**, int*, int, int);
+int fab(int);
+bool judge_stack(int*, int);
 
-void myVector::print_source(){
-    for(int i = 0; i<(this->size); i++){
-        cout<<(this->source[i])<<" ";
+int impossible_line{0};                                     // 紀錄不可能產生的排列（維護真實個數）
+
+int main(void){                                             // O(n^3)
+    int num{0}; cin>>num;
+
+    int **impossible_table = new int*[fab(num)];            // 不可能產生的排列，不知道有幾個 但不可能超過所有可能（此題答案）
+    for(int i = 0; i<fab(num); i++){
+        impossible_table[i] = new int[num];
     }
-    cout<<endl;
-}
 
-void myVector::pop_back_one(){
-    (this->size)--;
-    int *tmp = new int[(this->size)];
-    for(int i = 0; i<(this->size); i++){
-        tmp[i] = this->source[i];
-    }
-    delete[] this->source;
-    this->source = tmp;
-}
+    int *sor = new int[num];                                // 位於Rail的數字（為了產生窮舉排列，順序沒差）
+    for(int i = 0; i<num; i++) sor[i] = i;
 
-int myVector::back_one(){
-    return (this->source[(this->size)-1]);
-}
+    perm(impossible_table, sor, 0, num);                    // 獲得所有排列
 
-void myVector::push_back_len(){
-    for(int i = 0; i<this->size; i++){
-        (this->data)[this->lenSize][i] = this->source[i];
-    }
-    (this->lenSize)++;
-}
-
-void myVector::print_data(){
-    for(int i = 0; i<(this->lenSize); i++){
-        for(int j = 0; j<(this->size); j++){
-            cout<<(this->data[i][j])<<" ";
+    cout<<"Ans:"<<impossible_line<<endl;
+    for(int i = 0; i<impossible_line; i++){                 // 印出所求
+        for(int j = 0; j<num; j++){
+            cout<<impossible_table[i][j]<<" ";
         }
         cout<<endl;
     }
-}
-
-void myVector::push_back_one(int num){
-    (this->source)[this->size] = num;
-    (this->size)++;
-}
-
-myVector::myVector(){
-    this->size = 0;
-    this->lenSize = 0;
-    this->data = nullptr;
-    this->source = nullptr;
-}
-
-myVector::~myVector(){
-    if(this->data == nullptr) delete this->data;
-    else{
-        for(int i = 0; i<this->size; i++){
-            delete[] this->data[i];
-        }
-        delete this->data;
-    }
-    if(this->source == nullptr) delete this->source;
-    else delete[] this->source;
-}
-
-bool myVector::one_empty(){
-    if (this->size == 0) return true;
-    return false;
-}
-
-bool myVector::all_empty(){
-    if (this->lenSize == 0) return true;
-    return false;
-}
-
-int fab(int);
-
-int main(void){
-    int num{0};cin>>num;
-    myVector all_posible;
-
-    all_posible.data = new int*[fab(num)];     // 暴力窮舉所有排列可能時需要的容量數
-    for(int i = 0; i<fab(num); i++){
-        all_posible.data[i] = new int[num];
-    }
-    all_posible.source = new int[num];
     
-    
+
+    // ofstream file;                                       // 寫檔案
+    // file.open("./output.txt");
+    // file<<"輸出列數: 不可能排列答案"<<endl;
+    // for(int i = 0; i<impossible_line; i++){              // 寫出output.txt 至此層資料夾，輸入6以上會終端機會不完整（10 為極限，及 output.txt內容，11輸入記憶體爆炸）
+    //     file<<left<<setw(8)<<i+1<<": ";                  // 39916800為總排列數，其中數字會因為 可能or不可能 而降低，但記憶體最多要到約 1000*1000*4 bytes，39916800*11*4 bytes很明顯超出
+    //     for(int j = 0; j<num; j++){
+    //         file<<impossible_table[i][j]<<" ";
+    //     }
+    //     file<<endl;
+    // }
+    // file.close();
+
+    for(int i = 0; i<fab(num); i++){                        // avoid memory leak
+        delete[] impossible_table[i];
+    }
+    delete[] impossible_table;
+    delete[] sor;
 
     return 0;
 }
 
-int fab(int num){                               // 一開始要動態多少陣列的來源
+void perm(int **impossible_table, int *sor, int index, int size){                  // 暴力窮舉 O(n^2)
+    if(index == size-1){                                                           // 得出一組排列
+        bool flag = judge_stack(sor, size);                                        // 模擬真實 stack O(n)
+        if(flag == false){                                                         // 不可能產生，存入答案
+            for(int j = 0; j<size; j++){
+                impossible_table[impossible_line][j] = sor[j];
+            }
+            impossible_line++;
+        }
+    }
+    for(int i = index; i<size; i++){
+        swap(sor[index], sor[i]);
+        perm(impossible_table, sor, index+1, size);
+        swap(sor[index], sor[i]);
+    }
+}
+
+int fab(int num){                                                                   // 一開始要動態多少陣列的來源
     int ans{1};
     for(int i = 1; i<=num; i++){
         ans *= i;
     }
     return ans;
+}
+
+bool judge_stack(int *suppose_stack, int size){                                     // 檢查 假設成立的stack 是否真的成立
+    bool flag{false};
+    int *real_stack = new int[size];
+    int suppose_now{0}, real_now{0}, put_in{0};
+    while((put_in < size) && (suppose_now < size)){
+        real_stack[real_now] = put_in;                                              // 按照題意放入真實stack
+        while(real_stack[real_now] == suppose_stack[suppose_now]){                  // 在真實 stack 裡有與假設答案的 stack 相同
+            real_now--;                                                             // 真實stack拿出最上層
+            suppose_now++;                                                          // 在此刻與假設成立，比較下一刻的假設
+            if(real_now == -1) break;                                               // 在目前，真實stack已經沒東西了（可能來源鐵軌還有資料，現在沒得比了）
+        }
+        if(suppose_now == size){                                                    // 全部假設皆成立，為可能的排列
+            flag = true;
+        }
+        put_in++, real_now++;                                                       // 不管有沒有與假設相同，都要放入（如果沒有，放入是為了看下一個可不可能與當前假設相同）/(如果有，也早拿出真實堆疊了，可能處於沒有任何值，必須增加真實堆疊)
+    }
+    delete[] real_stack;
+    return flag;
 }
