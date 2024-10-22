@@ -7,7 +7,7 @@ for i in range(n):
 
 # print(sor)
 
-answer="{frozenset(p):i for i in range(1, n+1, 1) for p in itertools.combinations(sor, i)}"
+answer="{p:i for i in range(1, n+1, 1) for p in itertools.combinations(sor, i)}"
 
 
 _cmd ='' 
