@@ -178,7 +178,7 @@ int** table_to_matrix(int** table){
 }
 
 int** multi_matrix(int** left, int** right){
-    int **ans = new int*[(left[0][0]*right[0][1])+1];                       // 動態答案矩陣
+    int **ans = new int*[(left[0][0]*right[0][1])+1];                               // 動態答案矩陣
     for(int i = 0; i<(left[0][0]*right[0][1])+1; i++){
         ans[i] = new int[right[0][1]];
     }
@@ -187,48 +187,48 @@ int** multi_matrix(int** left, int** right){
     int now_col{0}, ans_non_zero_num{0};
     int row_begin{1}, now_row{left[1][0]}, multiple_sum{0};
 
-    int **trans_right = Fast_Transpose(right);              // get right matrix's Transpose Matrix table
+    int **trans_right = Fast_Transpose(right);                                      // get right matrix's Transpose Matrix table
 
-    for(int row = 1; row<=left[0][2];){                     // go around by each row data of left matrix
-        now_col = trans_right[1][0];                        // 新的一列作運算一定是從右矩陣的第一筆非零資料
-        for(int col = 1; col<=right[0][2];){                // go around by each col data of right matrix
-            if(row > left[0][2]) row = row_begin;           // 左矩陣已經不可能有資料了（左矩陣最後一列*右矩陣行 會超出 row 範圍）
-            if(left[row][0] != now_row){                    // 左矩陣已經做完此列了，不可能改變此結果格答案，但右矩陣並不一定移動到下一行（即左矩陣0*右矩陣行資料）
+    for(int row = 1; row<=left[0][2];){                                             // go around by each row data of left matrix
+        now_col = trans_right[1][0];                                                // 新的一列作運算一定是從右矩陣的第一筆非零資料
+        for(int col = 1; col<=right[0][2];){                                        // go around by each col data of right matrix
+            if(row > left[0][2]) row = row_begin;                                   // 左矩陣已經不可能有資料了（左矩陣最後一列*右矩陣行 會超出 row 範圍）
+            if(left[row][0] != now_row){                                            // 左矩陣已經做完此列了，不可能改變此結果格答案，但右矩陣並不一定移動到下一行（即左矩陣0*右矩陣行資料）
                 storeSum(ans, &ans_non_zero_num, now_row, now_col, &multiple_sum);
-                row = row_begin;                            // 繼續同行乘下一列
-                while(trans_right[col][0] == now_col){      // 移動至下一列資料
+                row = row_begin;                                                    // 繼續同行乘下一列
+                while(trans_right[col][0] == now_col){                              // 移動至下一列資料
                     col++;
-                    if(col > right[0][2]) break;            // 右矩陣已經不可能有資料了
+                    if(col > right[0][2]) break;                                    // 右矩陣已經不可能有資料了
                 }
-                if(col > right[0][2]) break;                // 右矩陣已經不可能有資料了（ 接 跳出while的）
-                now_col = trans_right[col][0];              // 改變關注的行
+                if(col > right[0][2]) break;                                        // 右矩陣已經不可能有資料了（ 接 跳出while的）
+                now_col = trans_right[col][0];                                      // 改變關注的行
             }
-            else if(trans_right[col][0] != now_col){        // 右矩陣已經做完此行了（已經移動到下一行），不可能改變此結果格答案，但左矩陣要回到此列的開始處繼續乘上下一行
+            else if(trans_right[col][0] != now_col){                                // 右矩陣已經做完此行了（已經移動到下一行），不可能改變此結果格答案，但左矩陣要回到此列的開始處繼續乘上下一行
                 storeSum(ans, &ans_non_zero_num, now_row, now_col, &multiple_sum);
                 row = row_begin;
-                now_col = trans_right[col][0];              // 行會藉由 for col 跳出，不必判斷
+                now_col = trans_right[col][0];                                      // 行會藉由 for col 跳出，不必判斷
             }
             else{
-                if(left[row][1] < trans_right[col][1]){                         // 左矩陣格位置比右矩陣格位置小，左矩陣要移動到下一格
+                if(left[row][1] < trans_right[col][1]){                             // 左矩陣格位置比右矩陣格位置小，左矩陣要移動到下一格
                     row++;
                 }
-                else if(left[row][1] == trans_right[col][1]){                   // 只有左矩陣格與右矩陣同格（轉置過後的右矩陣），才能相乘
+                else if(left[row][1] == trans_right[col][1]){                       // 只有左矩陣格與右矩陣同格（轉置過後的右矩陣），才能相乘
                     multiple_sum += left[row++][2] * trans_right[col++][2];
                 }
-                else if(left[row][1] > trans_right[col][1]){                    // 左矩陣格位置比右矩陣格位置大，右矩陣要移動到下一格
+                else if(left[row][1] > trans_right[col][1]){                        // 左矩陣格位置比右矩陣格位置大，右矩陣要移動到下一格
                     col++;
                 }
             }
         }
-        if(row > left[0][2]){                                                   // 最後一列最後一行做完，存入結果，跳出
+        if(row > left[0][2]){                                                       // 最後一列最後一行做完，存入結果，跳出
             storeSum(ans, &ans_non_zero_num, now_row, now_col, &multiple_sum);
-            break;                                                              // 左矩陣已經不可能有資料了
+            break;                                                                  // 左矩陣已經不可能有資料了
         } 
-        while(left[row][0] == now_row){                                         // 移動至下一列
+        while(left[row][0] == now_row){                                             // 移動至下一列
             row++;
-            if(row > left[0][2]) break;                                         // 左矩陣已經不可能有資料了
+            if(row > left[0][2]) break;                                             // 左矩陣已經不可能有資料了
         }
-        if(row > left[0][2]) break;                                             // 左矩陣已經不可能有資料了（接 while 跳出的）
+        if(row > left[0][2]) break;                                                 // 左矩陣已經不可能有資料了（接 while 跳出的）
         storeSum(ans, &ans_non_zero_num, now_row, now_col, &multiple_sum);
         now_row = left[row][0];
         row_begin = row;
