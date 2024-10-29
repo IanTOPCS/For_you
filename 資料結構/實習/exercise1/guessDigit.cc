@@ -2,19 +2,19 @@
 using namespace std;
 
 int main(void){
-    cout<<"***²q¼Æ¦r¹CÀ¸***"<<endl;
-    cout<<"½Ð¿é¤J¼Æ¦r½d³ò (0- ?):";
+    cout<<"***ï¿½qï¿½Æ¦rï¿½Cï¿½ï¿½***"<<endl;
+    cout<<"ï¿½Ð¿ï¿½Jï¿½Æ¦rï¿½dï¿½ï¿½ (0- ?):";
     int left{0};
     int right{-1};
     int cnt{0};
     while(right < left){
         cin>>right;
     }
-    cout<<"---¦n¤F!¹CÀ¸¶}©l---"<<endl;
-    cout<<"½Ð¿é¤J¼Æ¦r½d³ò (0-"<<right<<"):"<<endl;
+    cout<<"---ï¿½nï¿½F!ï¿½Cï¿½ï¿½ï¿½}ï¿½l---"<<endl;
+    cout<<"ï¿½Ð¿ï¿½Jï¿½Æ¦rï¿½dï¿½ï¿½ (0-"<<right<<"):"<<endl;
     int guess{0};
     while(left != right){
-        cout<<"§A²qªº¬O¡G";
+        cout<<"ï¿½Aï¿½qï¿½ï¿½ï¿½Oï¿½G";
         cin>>guess;
         if((guess < left) || (guess > right)){
             cout<<"..."<<endl;
@@ -22,23 +22,23 @@ int main(void){
             continue;
         }
         else if((guess-left) >= (right-guess)){
-            cout<<"¤p¤@ÂI"<<endl;
+            cout<<"ï¿½pï¿½@ï¿½I"<<endl;
             right = guess-1;
             cnt++;
         }
         else if((guess-left) < (right-guess)){
-            cout<<"¤j¤@ÂI"<<endl;
+            cout<<"ï¿½jï¿½@ï¿½I"<<endl;
             left = guess+1;
             cnt++;
         }
     }
     while(1){
-        cout<<"§A²qªº¬O¡G";
+        cout<<"ï¿½Aï¿½qï¿½ï¿½ï¿½Oï¿½G";
         cin>>guess;
         if(guess == left){
-            cout<<"§A²q¹ï¤F"<<endl;
+            cout<<"ï¿½Aï¿½qï¿½ï¿½F"<<endl;
             cnt++;
-            cout<<"Á`¦@²q¤F"<<cnt<<"¦¸"<<endl;
+            cout<<"ï¿½`ï¿½@ï¿½qï¿½F"<<cnt<<"ï¿½ï¿½"<<endl;
             break;
         }
         else{

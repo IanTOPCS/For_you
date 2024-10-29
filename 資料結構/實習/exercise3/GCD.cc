@@ -12,7 +12,7 @@ int main(void){
 
 int gcd(int a, int b){
     if((a != 0) && (b != 0)){
-        return gcd(b, a%b);     //在兩個都不為零，繼續輾轉相除法
+        return gcd(b, a%b);     
     }
-    return (a+b);               //在兩者未知誰為零，加起來即可
+    return (a+b);               
 }

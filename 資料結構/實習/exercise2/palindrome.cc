@@ -6,15 +6,15 @@ bool par(string, int, int);
 int main(void){
     string sor = "";
     cin>>sor;
-    int mid = ceil(sor.size()/2);               //±j¨î³W©w¨ú¤W­­
+    int mid = ceil(sor.size()/2);               // ç„¡æ¢ä»¶æ¨å»ï¼Œç›®çš„ç‚ºæ‰¾åˆ°é‚£è£¡åœä¸‹
     cout<<par(sor, mid, 0)<<endl;
     return 0;
 }
 
 bool par(string sor, int mid, int index){
-    if(index == mid) return 1;                  //¦pªG¨ì¤¤¶¡¨S°h¥X°j°é¡A´N¬O«e­±³£²Å¦X³W«h
-    if(sor[index] == sor[sor.size()-1-index]){  //¦pªG²Å¦X¦^¤å³W«h¡A´NÄ~Äò»¼°j
+    if(index == mid) return 1;                  // å›æ–‡åˆ¤å®šï¼Œå¦‚æœåˆ°ä¸­é–“ï¼ˆå›æ–‡åˆ¤æ–·çµ‚é»ï¼‰éƒ½ç›¸åŒï¼Œå°±æ˜¯å›æ–‡
+    if(sor[index] == sor[sor.size()-1-index]){  // å¦‚æœç›®å‰è·Ÿç›¸å°ä½ç½®ç›¸åŒï¼Œç¹¼çºŒæª¢æŸ¥ä¸‹ä¸€é †ä½
         return par(sor, mid, index+1);
     }
-    return 0;                                   //¤£²Å¦X´N°h¥X
+    return 0;                                   // ç›®å‰èˆ‡ç›¸å°ä½ç½®ä¸åŒï¼Œéå›æ–‡
 }

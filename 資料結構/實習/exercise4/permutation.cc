@@ -9,12 +9,12 @@ int main(void){
     cin>>sor;
     sort(sor.begin(), sor.end());
     perm(sor, 0);
-    cout<<"Total¡G"<<cnt<<endl;
+    cout<<"Total:"<<cnt<<endl;
     return 0;
 }
 
 void perm(string sor, int index){
-    if(index == sor.size()-1){                      //²×¤î±ø¥ó¡A§ä¨ì³Ì«áªí¦¹½üµ²§ô
+    if(index == sor.size()-1){                      // å·²ç¶“åˆ°æœ€å¾Œä½ç½®ï¼Œç‚ºä¸€çµ„æŽ’åˆ—
         for(int i = 0; i<sor.size(); i++){
             cout<<sor[i];
         }
@@ -22,18 +22,18 @@ void perm(string sor, int index){
         cnt++;
     }
     else{
-        for(int i = index; i<sor.size(); i++){
-            bool boom = false;                      //§PÂ_¨Ï§_±Æ¹L
-            for(int j = index; j<i; j++){           //«e­±¬O±Æ¹Lªº¡A¦pªG«e­±¦³»P§Ú¬Û¦Pªº¦r¡A¥Nªí¤w¸g§ä¹L
+        for(int i = index; i<sor.size(); i++){      // ç•¶æ­¤ç‚ºé–‹é ­ï¼Œé–‹å§‹ä¸€å€‹ä¸€å€‹çœ‹æ˜¯å¦æŽ’åˆ—ï¼ˆi ä¹‹å‰ç‚ºå·²ç¶“æŽ’éŽçš„ï¼‰
+            bool boom = false;                      // ä»¥ flag åˆ¤æ–·æ˜¯å¦é‡è¤‡éŽ
+            for(int j = index; j<i; j++){           // å¾žå‰é¢æŽ’éŽä¾†çš„ï¼Œæ•…åªè¦å‰é¢å‡ºç¾éŽï¼ˆæª¢æŸ¥åˆ° i ç‚ºæ­¢ï¼‰
                 if(sor[i] == sor[j]){
                     boom = true;
-                    break;                          //¤w¸g½T»{±Æ¹L
+                    break;                          // æœ‰é‡è¤‡ï¼Œå¾Œé¢å¯ä»¥ä¸ç”¨åˆ¤æ–·
                 }
             }
-            if(boom) continue;                      //¤£®ö¶O¸ê·½°µ­«½Æªº¨Æ
-            swap(sor[i], sor[index]);               //¥æ´«¥H¹Á¸Õ¦UºØ¤£¦Pªº±Æ¦C²Õ¦X
-            perm(sor, index+1);                     //¶i¤J§PÂ_
-            swap(sor[i], sor[index]);               //±N´«¹Lªºµ²ªG«ì´_¡A¥HÅýi«ü¨ì¤U¤@­ÓÄ~Äò»¼°j
+            if(boom) continue;                      // å·²ç¶“åšéŽï¼Œé—œæ³¨ä¸‹å€‹é †ä½
+            swap(sor[i], sor[index]);               // å˜—è©¦äº¤æ›
+            perm(sor, index+1);                     // äº¤æ›å®Œåˆ¤æ–·ï¼ˆäº¤çµ¦ä¸‹å€‹æˆ‘ï¼‰
+            swap(sor[i], sor[index]);               // åˆ¤æ–·çŽ©äº¤æ›å›žä¾†
         }
     }
 }
