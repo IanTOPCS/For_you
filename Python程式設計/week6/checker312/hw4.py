@@ -10,7 +10,7 @@ def hanoi(n,a,b,c):
         yield (a, c)
         yield from hanoi(n-1, b, a, c)
     
-# n = int(input())
-# for a, c in hanoi(n, 0, 1, 2):
-#     print(f'move a disk from {a} to {c}')
-hw_hanoi.checker(hanoi)
+n = int(input())
+for a, c in hanoi(n, 0, 1, 2):
+    print(f'move a disk from {a} to {c}')
+# hw_hanoi.checker(hanoi)
