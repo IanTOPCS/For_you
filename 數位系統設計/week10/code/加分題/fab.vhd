@@ -8,10 +8,10 @@ entity fab is
         X:in std_logic_vector(9 downto 0);
         start:in std_logic;
         clk:in std_logic;
-        HEX0, HEX1, HEX2, HEX3:out std_logic_vector(6 downto 0)
+        HEX0, HEX1, HEX2, HEX3:out std_logic_vector(6 downto 0);
+		dp_ans:out std_logic_vector(3 downto 0)
     );
 end fab;
-
 architecture behavior of fab is
     component mul_nn is                                                 -- 上次的乘法電路，懶惰蟲想吃老本：Ｐ
         generic(number:integer range 1 to 32);
@@ -123,10 +123,10 @@ begin
             end if;
         end if;
     end process;
-
+    
     HEX0_part:decoder_7seg port map(show(0),HEX0);  						-- 轉換數值成七段顯示器
 	HEX1_part:decoder_7seg port map(show(1),HEX1);
 	HEX2_part:decoder_7seg port map(show(2),HEX2);
 	HEX3_part:decoder_7seg port map(show(3),HEX3);
-
+	dp_ans <= dp;                                                           -- 輸出小數點輪播
 end behavior;
