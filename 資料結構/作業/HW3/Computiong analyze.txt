@@ -1,0 +1,1 @@
+　　關於 heap 的特性，此題為 max heap ，即最大值為 root，且為 complete binary tree。但只規範最大值，並無規範其他值，並不能像 binary search tree 一樣，切分值為兩半，故無法確認值落在哪裡。最慘的情況是一個個遍歷完直到最後一個才找到或沒找到，故時間複雜度為 O(n)
