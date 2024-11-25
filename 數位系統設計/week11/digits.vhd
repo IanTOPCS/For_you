@@ -14,6 +14,6 @@ end digits;
 
 architecture digits of digits is
 begin
-	num1 <= (BIN /10) mod 10; 				-- 算出十位數
+	num1 <= (BIN /10); 						-- 算出十位數
 	num0 <= BIN mod 10; 					-- 求出個位數
 end digits;
