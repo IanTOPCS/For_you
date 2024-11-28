@@ -1,6 +1,8 @@
 # include <iostream>
 using namespace std;
 
+int point{0};
+
 class vertex{
 public:
     int x;
@@ -57,40 +59,9 @@ public:
     node *head;
     node *tail;
     list(node *head = nullptr, node *tail = nullptr);
-    void add(node *n);
     void push(node *n);
     void print();
 };
-
-void list::add(node *n){
-    if(head == nullptr){
-        head = n;
-        tail = n;
-        return;
-    }
-
-    node *tmp = head;
-    while(tmp->next != nullptr){
-        if((tmp->data < n->data) && (tmp->next->data > n->data)){
-            node *insert = tmp->next;
-            tmp->next = n;
-            n->next = insert;
-            return;
-        }
-        tmp = tmp->next;
-    }
-    tmp = head;
-    while(tmp != nullptr){
-        if(tmp->data == n->data){
-            delete n;
-            return;
-        }
-        tmp = tmp->next;
-    }
-    tail->next = n;
-    tail = n;
-    return;
-}
 
 void list::print(){
     node *tmp = head;
@@ -129,14 +100,15 @@ int main(void){
     edge *sor = get_edge();
     int **matrix = get_matrix(sor);
     print_matrix(matrix);
+
     list* ans = get_list(matrix);
     print_list(ans);
     return 0;
 }
 
 void print_list(list *sor){
-    int size = sizeof(sor)/sizeof(sor[0]);
-    for(int i = 0; i<size; i++){
+    cout<<"adjacency list:"<<endl;
+    for(int i = 0; i<point; i++){
         cout<<i<<": ";
         sor[i].print();
     }
@@ -145,9 +117,8 @@ void print_list(list *sor){
 
 void print_matrix(int **sor){
     cout<<"adjacency matrix:"<<endl;
-    int size = sizeof(sor);
-    for(int i = 0; i<size; i++){
-        for(int j = 0; j<size; j++){
+    for(int i = 0; i<point; i++){
+        for(int j = 0; j<point; j++){
             cout<<sor[i][j]<<" ";
         }
         cout<<endl;
@@ -160,20 +131,18 @@ edge *get_edge(){
     int x{0}, y{0};
     while(cin>>x>>y){
         sor->push(new vertex(x, y));
+        point++;
     }
+
     return sor;
 }
 
 list* get_list(int **sor){
-    int size = sizeof(sor);
-    list *ans = new list[size];
-    for(int i = 0; i<size; i++){
-        for(int j = 0; j<size; j++){
+    list *ans = new list[point];
+    for(int i = 0; i<point; i++){
+        for(int j = 0; j<point; j++){
             if(sor[i][j] == 1){
-                ans->add(new node(i));
-                ans->add(new node(j));
                 ans[i].push(new node(j));
-                ans[j].push(new node(i));
             }
         }
     }
