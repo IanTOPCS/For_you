@@ -160,7 +160,7 @@ architecture MIPS of MIPS is
 		signal AddResult:std_logic_vector(31 downto 0);	
 		signal Output:std_logic_vector(31 downto 0);
 	
-		signal delay:integer range 0 to 50000;
+		signal delay:integer range 0 to 50000000;
 
 begin
 
@@ -175,8 +175,8 @@ begin
 			if Branch = '1' and Zero = '1' then
 				PC <= AddResult;
 
-			-- elsif Jump = '1' and delay = 24999 then --直到暫停的時間結束，PC指到下一個指令 
-			elsif Jump = '1' and delay = 1 then
+			elsif Jump = '1' and delay = 24999999 then --直到暫停的時間結束，PC指到下一個指令 
+			--elsif Jump = '1' and delay = 1 then
 			--else
 				delay <= 0;
 				OUTLEDone <= '1';					-- 亮
@@ -186,8 +186,8 @@ begin
 				delay <= delay + 1;					-- 延遲所有過程，讓PC暫停
 			end if;
 			
-			-- if OUTLED = '1' and delay = 49999 then --直到暫停的時間結束，PC指到下一個指令
-			if OUTLED = '1' and delay = 3 then	
+			if OUTLED = '1' and delay = 49999999 then --直到暫停的時間結束，PC指到下一個指令
+			--if OUTLED = '1' and delay = 3 then	
 				delay <= 0;
 				OUTLEDone <= '0';					-- 暗
 				PC <= PC +4;

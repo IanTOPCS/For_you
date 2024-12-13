@@ -161,52 +161,53 @@ architecture MIPS of MIPS is
 		signal AddResult:std_logic_vector(31 downto 0);	
 		signal Output:std_logic_vector(31 downto 0);
 	
-		signal delay:integer range 0 to 150000;
+		signal delay:integer range 0 to 150000000;
 		signal flag0, flag1, flag2:std_logic := '0';
 
 begin
-	
 --Program Counter	
 	process(clk,reset)
 	begin
 		if reset = '0' then
 			PC <= (others => '0');
 			delay <= 0;
-			flag2 <= '1';
-			OUTLED(2) <= '1';							-- 一開始亮最左一個LED
+			flag0 <= '1';
+			OUTLED(0) <= '1';							-- 一開始亮最左一個LED
+			OUTlED(1) <= '0';
+			OUTLED(2) <= '0';
 		elsif clk'event and clk = '1' then
 			if Branch = '1' and Zero = '1' then
 				PC <= AddResult;
  
-			-- elsif Jump = '1' and flag2 = '1' and delay = 24999 then --直到暫停的時間結束，PC指到下一個指令
-			elsif Jump = '1' and flag0 = '1' and delay = 1 then
+			elsif Jump = '1' and flag2 = '1' and delay = 24999999 then --直到暫停的時間結束，PC指到下一個指令
+			--elsif Jump = '1' and flag0 = '1' and delay = 1 then
 			--else
 				delay <= 0;							-- 歸零重新計算
-				flag0 <= '0';						-- 最右不亮
-				flag2 <= '1';						-- 最左亮起
-				OUTLED(2) <= '1';					-- 開啟最左
-				OUTLED(0) <= '0';					-- 關掉最右
+				flag0 <= '1';						-- 最右不亮
+				flag2 <= '0';						-- 最左亮起
+				OUTLED(0) <= '1';					-- 開啟最左
+				OUTLED(2) <= '0';					-- 關掉最右
 				PC <= PC(31 downto 28)&Instruction(25 downto 0)&"00";				
 			elsif Halt = '0' then
 			--else
 				delay <= delay + 1;					-- 延遲所有過程，讓PC暫停
 			end if;
 			
-			-- if OUTLEDsig = '1' and flag0 = '1' and delay = 149999 then	--直到暫停的時間結束，PC指到下一個指令
-			if OUTLEDsig = '1' and flag2 = '1' and delay = 11 then
+			if OUTLEDsig = '1' and flag0 = '1' and delay = 149999999 then	--直到暫停的時間結束，PC指到下一個指令
+			--if OUTLEDsig = '1' and flag2 = '1' and delay = 11 then
 				delay <= 0;
-				OUTLED(2) <= '0';					-- 關掉最左
+				OUTLED(0) <= '0';					-- 關掉最左
 				OUTLED(1) <= '1';					-- 開啟中間
-				flag2 <= '0';						-- 最左不亮
+				flag0 <= '0';						-- 最左不亮
 				flag1 <= '1';						-- 中間亮起
 				PC <= PC +4;
-			-- elsif OUTLEDsig = '1' and flag1 = '1' and delay = 149999 then --直到暫停的時間結束，PC指到下一個指令
-			elsif OUTLEDsig = '1' and flag1 = '1' and delay = 11 then
+			elsif OUTLEDsig = '1' and flag1 = '1' and delay = 149999999 then --直到暫停的時間結束，PC指到下一個指令
+			--elsif OUTLEDsig = '1' and flag1 = '1' and delay = 11 then
 				delay <= 0;
 				OUTLED(1) <= '0';					-- 關掉中間
-				OUTLED(0) <= '1';					-- 開啟最右
+				OUTLED(2) <= '1';					-- 開啟最右
 				flag1 <= '0';						-- 中間不亮
-				flag0 <= '1';						-- 最右亮起
+				flag2 <= '1';						-- 最右亮起
 				PC <= PC +4;
 			end if;
 		end if;
