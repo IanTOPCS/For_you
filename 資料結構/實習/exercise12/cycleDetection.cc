@@ -56,9 +56,10 @@ int main(void){
     for(int i = 0; i<sor.size(); i++){
         if(sor[i] == ' ') continue;
         string tmp{""};
-        for(int j = i; j<sor.size(); j++){
-            if(sor[j] == ' ') break;
-            tmp += sor[j];
+        while(i < sor.size()){
+            if(sor[i] == ' ') break;
+            tmp += sor[i];
+            i++;
         }
         ans->push(new poly(stoi(tmp)));
     }
@@ -83,6 +84,7 @@ int detection(polyRow *sor, int pos){
         cnt++;
         cycle = cycle->next;
     }
+    cnt++;
     return cnt;
 }
 
