@@ -36,12 +36,12 @@ int main(void){
 }
 
 void push(int value, int *size){
-    int index = ++(*size);
-    while((index != 1) && (value > heap[index/2])){
-        heap[index] = heap[index/2];
-        index /= 2;
+    int index = ++(*size);                              // 增加填值空間(1 base)
+    while((index != 1) && (value > heap[index/2])){     // 非 root(有空間調整) 且 比上一層大
+        heap[index] = heap[index/2];                    // 下移較小的值(下層調整完畢)
+        index /= 2;                                     // 關注上一層
     }
-    heap[index] = value;
+    heap[index] = value;                                // 於正確層數更新填入值
 }
 
 void pop(int *size){
@@ -49,13 +49,13 @@ void pop(int *size){
     int last_val = heap[(*size)--];
     int parent{1}, child{2};
     while(child <= *size){
-        if((child < *size) && (heap[child] < heap[child+1])) child++;
-        if(last_val >= heap[child]) break;
-        heap[parent] = heap[child];
-        parent = child;
-        child *= 2;
+        if((child < *size) && (heap[child] < heap[child+1])) child++;   // 兄弟較大
+        if(last_val >= heap[child]) break;                              // 找到合適位置
+        heap[parent] = heap[child];                                     // 向上覆蓋父節點
+        parent = child;                                                 // 關心下一層
+        child *= 2;                                                     // 關心下一層
     }
-    heap[parent] = last_val;
+    heap[parent] = last_val;                                            // 更新合適位置值
     return;
 }
 
