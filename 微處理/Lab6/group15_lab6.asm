@@ -2,26 +2,26 @@
 	JMP INIT
 
 INIT:
-	MOV	20H, #1		;陣列的起點
-	MOV	21H, #3		; 
+	MOV	20H, #1
+	MOV	21H, #3
 	MOV	22H, #6		
 	MOV	23H, #9		
 	MOV	24H, #13		
 	MOV	25H, #15		
-	MOV	26H, #18		;
+	MOV	26H, #18
 	MOV	27H, #22
 	MOV	28H, #25
 	MOV	29H, #28
 
-MAIN:               	;使用者主程式
-	MOV	R0, #20H		;陣列的起點
-	MOV	R1, #10	;陣列的長度
+MAIN:
+	MOV	R0, #20H
+	MOV	R1, #10
 	MOV 0X30, R0
 	MOV 0X31, R1
 	CALL	QUARTILE
-	JMP	$   		;跳回自己，無限迴圈, 在此檢?輸出
+	JMP	$
 QUARTILE:
-	CALL MEDIAN		;在此填入副程式
+	CALL MEDIAN
 	MOV AR2, R6
 	MOV AR3, R7
 

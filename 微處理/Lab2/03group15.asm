@@ -1,8 +1,10 @@
+;按下button 0(switch 0)，bit為0
+;按下button 0，反向顯示(F~0)
 start:
 sp0:
-	MOV P1, #0xc0
-	JNB P2.0, spF
-	JMP sp1
+	MOV P1, #0xc0	;七段顯示器0
+	JNB P2.0, spF ;如果P2(button 0 位置)第零個bit是零，跳到spF的label
+	JMP sp1				;無條件跳到sp1的label
 sp1:
 	MOV P1, #0xf9
 	JNB P2.0, sp0
