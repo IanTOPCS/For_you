@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-		ORG	0H          	;系統開機的執行位址為0
+		ORG	0H          	
 		JMP	INIT
 D_ARRAY		EQU	40H		;display information
 		
-		ORG	30H          	;使用者程式起始位址
-=======
-		ORG	0H          	;嚙緣嚙諄開嚙踝蕭嚙踝蕭嚙踝蕭嚙踝蕭嚙罷嚙踝蕭0
-		JMP	INIT
-D_ARRAY		EQU	40H		;display information
-		
-		ORG	30H          	;嚙誕用者程嚙踝蕭嚙稻嚙締嚙踝蕭}
->>>>>>> e7b3cd0 (feat: micro 8051)
+		ORG	30H          	
 
 INIT:
 		MOV	R0, #D_ARRAY	;prepare display content
@@ -24,7 +16,7 @@ INIT:
 MAIN:
 CALL_LOOP:
 		MOV	R4, #D_ARRAY	;display content
-		MOV	R5, #2		;start position
+		MOV	R5, #0		;start position
 		MOV	R6, #4		;display length
 		MOV	R7, #20		;delay parameter
 		CALL	DISPLAY
@@ -43,9 +35,10 @@ DISPLAY:
 		CALL DELAY
 		MOV DPTR, #POSITION
 		MOV A, R5
+    CALL DisplayDigit
 		INC R5
 		MOVC A, @A+DPTR
-		MOV P0, A
+		MOV P1, A
 		SETB P2.3; POSITION
 		CLR P2.3
 
@@ -54,7 +47,7 @@ DISPLAY:
 		MOV DPTR, #SEGMENT
 		MOV A, @R0
 		MOVC A, @A+DPTR
-		MOV P0, A
+		MOV P1, A
 		SETB P2.2; VALUE
 		CLR P2.2
 		
@@ -62,10 +55,19 @@ DISPLAY:
 ;END OF YOUR CODE
 	RET
 
+DisplayDigit:
+    MOV A, R5
+    MOV C, ACC.1
+    MOV P3.3, C
+
+    MOV C, ACC.0
+    MOV P3.4, C
+    RET
+
 SEGMENT:
-		DB	03FH, 06H, 05BH, 04FH
-		DB	066H, 06DH, 07DH, 07H
-		DB	07FH, 06FH
+		DB	0xC0, 0xf9, 0xa4, 0xb0
+		DB	0x99, 0x92, 0x82, 0xf8
+		DB	0x80, 07FH
 POSITION:
 		DB	0FEH, 0FDH, 0FBH, 0F7H
 		DB	0EFH, 0DFH, 0BFH, 07FH
