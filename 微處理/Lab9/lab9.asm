@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-		ORG	0H          	;系統開機的執行位址為0
-		JMP	INIT
-D_ARRAY		EQU	40H		;display information
-		
-		ORG	30H          	;使用者程式起始位址
-=======
 		ORG	0H          	;嚙緣嚙諄開嚙踝蕭嚙踝蕭嚙踝蕭嚙踝蕭嚙罷嚙踝蕭0
 		JMP	INIT
 D_ARRAY		EQU	40H		;display information
 		
 		ORG	30H          	;嚙誕用者程嚙踝蕭嚙稻嚙締嚙踝蕭}
->>>>>>> e7b3cd0 (feat: micro 8051)
 
 INIT:
 		MOV	R0, #D_ARRAY	;prepare display content
