@@ -1,6 +1,7 @@
 # include <bits/stdc++.h>
 using namespace std;
-
+// This is backpack problem, not as 01-backpack, object can cut.
+// Key: Find object valuable of one unit above others (greedy)
 class valPerW{
 public:
     double value;

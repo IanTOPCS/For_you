@@ -1,6 +1,6 @@
 # include <bits/stdc++.h>
 using namespace std;
-
+// This is DP 01-package problem, object you pick can't use value of unit(can't cut). Therefore, greedy method is useless.
 int main(void){
   int objNum{0}, packWt{0}; cin>>objNum>>packWt;
   vector<int> objWt(objNum+1, 0), objVal(objNum+1, 0);

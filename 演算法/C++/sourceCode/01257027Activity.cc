@@ -1,6 +1,8 @@
 # include <bits/stdc++.h>
 using namespace std;
-
+// The problem is arrange as more activities as you can, and join.
+// This is greedy problem, use the end of activity to sort all of activities.
+// key: If the activity end earlier, you had more time to join other activies.
 class Act{
 public:
     int start;
