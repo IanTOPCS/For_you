@@ -1,6 +1,7 @@
 ; This program is for 8051 assembly language on edisim51, not on board
 ; To let edisim51 led-ports work, the port has been set to p1, p3.4 p3.3 is used to choose led-port.
 ; Remember to set update-frequency above 10000, otherwise the delay will be too long.
+; The interupt is control by software, not cpu. So you need to clear overflow flag and stop timer by yourself if timer mode you using is 1
 		ORG	0H
 		JMP	INIT
 D_ARRAY		EQU	40H		;display information
@@ -9,13 +10,13 @@ D_ARRAY		EQU	40H		;display information
 
 INIT:
 		MOV	R0, #D_ARRAY	;prepare display content
+		MOV 	@R0,#8
+		INC	R0
 		MOV 	@R0,#0
 		INC	R0
 		MOV 	@R0,#5
 		INC	R0
 		MOV 	@R0,#1
-		INC	R0
-		MOV 	@R0,#8
 MAIN:
 CALL_LOOP:
 		MOV	R4, #D_ARRAY	;display content
@@ -29,13 +30,14 @@ CALL_LOOP:
 DELAY:			;input R7
 		MOV R3, AR7
 DE_LOOP:		
-		MOV TMOD, #01H
-		MOV TH0, HIGH(-921)
-		SETB TR0
+		MOV TMOD, #01H ; Timer 0 mode 1
+		MOV TH0, HIGH(-921) ; delay 1 ms
+		MOV TH0, LOW(-921)
+		SETB TR0 ; let timer 0 begin
 WAIT: 	
-		JNB TF0, WAIT
-		CLR TR0
-		CLR TF0
+		JNB TF0, WAIT ; till timer overflow, else goto wait
+		CLR TR0 ; stop timer 0
+		CLR TF0 ; clear timer 0 overflow flag
 		DJNZ R3, DE_LOOP
 
 		RET
