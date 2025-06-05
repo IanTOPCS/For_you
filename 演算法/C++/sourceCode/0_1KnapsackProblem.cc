@@ -20,6 +20,7 @@ int main(void){
       }
     }
   }
+
   // The max value of 0/1 pack when have objNum object with limit of packWt
   cout<<dp[objNum][packWt]<<endl;
   // deal with record of max value in 0/1 pack

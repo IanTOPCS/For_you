@@ -1,0 +1,8 @@
+services:
+  cplusplus:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sleep infinity
+    volumes:
+      - ../..:/workspaces:cached

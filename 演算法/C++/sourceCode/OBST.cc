@@ -39,8 +39,8 @@ void optimalBST(const vector<double>& p, const vector<double>& q, int n) {
 }
 
 int main() {
-    vector<double> p = {0.15, 0.10, 0.05, 0.10, 0.20};  // 搜尋鍵的機率 pi
-    vector<double> q = {0.05, 0.10, 0.05, 0.05, 0.05, 0.10};  // 假鍵的機率 qi
+    vector<double> p = {0.15, 0.05, 0.10, 0.10, 0.20};  // 搜尋鍵的機率 pi
+    vector<double> q = {0.10, 0.05, 0.05, 0.05, 0.05, 0.10};  // 假鍵的機率 qi
     int n = p.size();
     optimalBST(p, q, n);
     return 0;

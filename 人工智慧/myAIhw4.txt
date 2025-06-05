@@ -1,0 +1,95 @@
+Problem 1：
+
+1. (C)→(Y)	premise
+2. (Y)↔(D)	premise
+3. C	premise
+4. ((Y)→(D))∧((D)→(Y))	2, Equiv
+5. (Y)→(D)	4, Simp
+6. Y	1,3, MP
+7. D	5,6, MP#
+
+Problem 2：
+
+1. (A)→(D)	premise
+2. (¬(A))→((¬(D))→(C))	premise
+3. ((¬(A))∧(¬(D)))→(C)	2, Exp
+4. (¬((¬(A))∧(¬(D))))∨(C)	3, Impl
+5. ((¬(¬(A)))∨(¬(¬(D))))∨(C)	4, DeM
+6. ((A)∨(¬(¬(D))))∨(C)	5, DN
+7. ((A)∨(D))∨(C)	6, DN
+8. (¬(A))∨(D)	1, Impl
+9. (A)∨((D)∨(C))	7, Assoc
+10. ((D)∨(C))∨(D)	9,8, Res
+11. (D)∨((D)∨(C))	10, Comm
+12. ((D)∨(D))∨(C)	11, Assoc
+13. (D)∨(C)	12, Idem
+14. (C)∨(D)	13, Comm
+15. (¬(¬(C)))∨(D)	14, DN
+16. (¬(C))→(D)	15, Impl#
+
+Problem 3：
+
+1. (T)→((E)∨(¬(L)))	premise
+2. ((E)→(M))∧((¬(L))→(K))	premise
+3. (E)→(M)	2, Simp
+4. ((¬(L))→(K))∧((E)→(M))	2, Comm
+5. (¬(L))→(K)	4, Simp
+6. (¬(¬(L)))∨(K)	5, Impl
+7. (L)∨(K)	6, DN
+8. (¬(T))∨((E)∨(¬(L)))	1, Impl
+9. (K)∨(L)	7, Comm
+10. ((¬(T))∨(E))∨(¬(L))	8, Assoc
+11. (¬(L))∨((¬(T))∨(E))	10, Comm
+12. (K)∨((¬(T))∨(E))	7,11, Res
+13. ((K)∨(¬(T)))∨(E)	12, Assoc
+14. (E)∨((K)∨(¬(T)))	13, Comm
+15. (¬(E))∨(M)	3, Impl
+16. ((K)∨(¬(T)))∨(M)	14,15, Res
+17. ((¬(T))∨(K))∨(M)	16, Comm
+18. (¬(T))∨((K)∨(M))	17, Assoc
+19. (¬(T))∨((M)∨(K))	18, Comm
+20. (T)→((M)∨(K))	19, Impl#
+
+Problem 4：
+
+1. (D)∨((I)∧(S))	premise
+2. ((D)→(L))∧((L)→(S))	premise
+3. ((D)∨(I))∧((D)∨(S))	1, Dist
+4. ((D)∨(S))∧((D)∨(I))	3, Comm
+5. (D)∨(S)	4, Simp
+6. (D)∨(I)	3, Simp
+7. (D)→(L)	2, Simp
+8. ((L)→(S))∧((D)→(L))	2, Comm
+9. (L)→(S)	8, Simp
+10. (¬(D))∨(L)	7, Impl
+11. (¬(L))∨(S)	9, Impl
+12. (L)∨(¬(D))	10, Comm
+13. (¬(D))∨(S)	12,11, Res
+14. (S)∨(S)	5,13, Res
+15. S	14, Idem#
+
+Problem 5：
+
+1. (A)∧(¬(B))	premise
+2. (B)∨((A)→(D))	premise
+3. ((C)∧(E))↔(D)	premise
+4. A	1, Simp
+5. (¬(B))∧(A)	1, Comm
+6. ¬(B)	5, Simp
+7. (((C)∧(E))→(D))∧((D)→((C)∧(E)))	3, Equiv
+8. ((D)→((C)∧(E)))∧(((C)∧(E))→(D))	7, Comm
+9. (D)→((C)∧(E))	8, Simp
+10. (¬(D))∨((C)∧(E))	9, Impl
+11. ((¬(D))∨(C))∧((¬(D))∨(E))	10, Dist
+12. (¬(D))∨(C)	11, Simp
+13. (B)∨((¬(A))∨(D))	2, Impl
+14. ((¬(A))∨(D))∨(B)	13, Comm
+15. (¬(A))∨(D)	14,6, DS
+16. (D)∨(¬(A))	15, Comm
+17. ¬(¬(A))	4, DN
+18. D	16,17, DS
+19. ¬(¬(D))	18, DN
+20. (C)∨(¬(D))	12, Comm
+21. C	20,19, DS
+22. (A)∧(C)	4,21, Conj#
+
