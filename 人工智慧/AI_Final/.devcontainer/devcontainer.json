@@ -7,9 +7,9 @@
 	],
 	"service": "backend",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"features":{
-		"ghcr.io/devcontainers-contrib/features/isort:2": {}
-	},
+	// "features":{
+	// 	"ghcr.io/devcontainers-contrib/features/isort:2": {}
+	// },
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
