@@ -406,7 +406,9 @@ string inputBuffer(string line, int msgsock){
 
 int main() {
     signal(SIGINT, sigint_handler);
-    bool displayFalse = false;
+    bool displayFalse {false}; // arrow color (white/red)
+    bool showCmd {false};
+
     string line{""};
 
     int sock{0};
@@ -441,87 +443,102 @@ int main() {
 		perror("getting socket name");
 		exit(1);
 	}
-    // cout<<"Socket has port #"<<ntohs(server.sin_port)<<endl; // socket port
-
     /* Start accepting connections */
 	listen(sock, 5);
     while (true) {
-        cout << get_prompt_path(displayFalse);
-        line = trim(getInputLine(line));
-        if (line.empty()) continue;
-        if (line == "exit") break;
+        FD_ZERO(&ready);
+        FD_SET(STDIN_FILENO, &ready);  // 本地輸入
+        FD_SET(sock, &ready);          // 等待 client 連線
 
-        if(line == "port"){
-            cout<<"Socket has port #"<<ntohs(server.sin_port)<<endl; // show socket port
+        to.tv_sec = 0;
+        to.tv_usec = 10000; // 等待 10ms
+
+        int nfds = max(STDIN_FILENO, sock) + 1;
+        int ret = select(nfds, &ready, nullptr, nullptr, &to);
+        if (ret < 0) {
+            // perror("select");
             continue;
         }
 
-        FD_ZERO(&ready);
-		FD_SET(sock, &ready);
-		to.tv_sec = 0;
-		to.tv_usec = 0;
-		if (select(sock + 1, &ready, 0, 0, &to) < 0) {
-			perror("select");
-			continue;
-		}
+        if (showCmd == false){
+            cout << get_prompt_path(displayFalse) << flush;
+            showCmd = true;
+        }
 
-        // 處理 client command
-        if(FD_ISSET(sock, &ready)){
-            int original_stdout = dup(STDOUT_FILENO);
-            int original_stderr = dup(STDERR_FILENO);
-            pid = fork();
-			if( pid == 0 ){
-				continue;
+        // 本地輸入
+        if (FD_ISSET(STDIN_FILENO, &ready)) {
+            // cout << get_prompt_path(displayFalse) << flush;
+            line =  trim(getInputLine(line));;
+            if (line == "exit") break;
+            if (line == "port") {
+                cout << "Socket has port #" << ntohs(server.sin_port) << endl;
+                showCmd = false;
+                continue;
             }
-			else {
-                length = sizeof(client);
-                msgsock = accept(sock, (struct sockaddr *)&client, &length);
-                client_addr = inet_ntoa(client.sin_addr);
-                cout<<"Client connection from "<<client_addr<<endl; // Client connect
-                if (msgsock == -1)
-                    perror("accept");
-                else do {
+            if (!line.empty()) {
+                displayFalse = localcommand(line, displayFalse);
+                showCmd = false;
+            }
+        }
+
+        // 有 client 要連線
+        if (FD_ISSET(sock, &ready)) {
+            length = sizeof(client);
+            msgsock = accept(sock, (struct sockaddr *)&client, &length);
+            if (msgsock < 0) {
+                perror("accept");
+                showCmd = false;
+                continue;
+            }
+
+            client_addr = inet_ntoa(client.sin_addr);
+            // cout << "Client connection from " << client_addr << endl;
+
+            pid = fork();
+            if (pid == 0) {
+                close(sock);  // child 不需要 listen socket
+
+                int original_stdout = dup(STDOUT_FILENO);
+                int original_stderr = dup(STDERR_FILENO);
+                char buf[BUFSIZ] = {};
+                int rval;
+
+                do {
                     bzero(buf, sizeof(buf));
-                    if ((rval = read(msgsock, buf, BUFSIZ)) < 0)
-                        perror("reading stream message");
-                    else if ((rval == 4) && (strncmp(buf, "^]", 2) == 0)){
-                        cout<<"Ending connection from "<<client_addr<<endl;
+                    rval = read(msgsock, buf, BUFSIZ);
+                    if (rval < 0) {
+                        perror("reading from client");
+                        showCmd = false;
+                        break;
+                    } else if (rval == 4 && strncmp(buf, "^]", 2) == 0) {
                         dup2(original_stdout, STDOUT_FILENO);
                         dup2(original_stderr, STDERR_FILENO);
                         close(original_stdout);
                         close(original_stderr);
-                        cout<<endl;
+                        // cout << "Ending connection from " << client_addr << endl;
                         break;
-                    }
-                    else{
+                    } else {
+                        // 將輸出導向 client
                         dup2(msgsock, STDOUT_FILENO);
                         dup2(msgsock, STDERR_FILENO);
-                        string tmpline{""};
-                        for(int i = 0; i<sizeof(buf); i++){
-                            if(buf[i] != '\0') tmpline += buf[i];
-                            else{
-                                tmpline += '\0';
-                                break;
-                            }
-                        }
-                        string line{""};
-                        for(int i = 0; i<tmpline.size()-3; i++) line += tmpline[i];
-                        line = trim(inputBuffer(line, msgsock));
-                        
-                        displayFalse = localcommand(line, displayFalse);
+
+                        string tmpline(buf, rval);
+                        tmpline.erase(tmpline.find_last_not_of("\r\n") + 1);
+
+                        string cleaned = trim(inputBuffer(tmpline, msgsock));
+                        displayFalse = localcommand(cleaned, displayFalse);
                         cout << get_prompt_path(displayFalse);
                         setbuf(stdout, NULL);
-                        setbuf(stderr, NULL);  // 順便取消 stderr 緩衝
-
+                        setbuf(stderr, NULL);
                     }
                 } while (rval > 0);
-			    close(msgsock);
-			}
-        }
-        else{  
-            displayFalse = localcommand(line, displayFalse);
-        }
 
+                close(msgsock);
+                exit(0);
+            } else {
+                close(msgsock); // parent 不需要這個 fd
+            }
+        }
     }
 
     return 0;
