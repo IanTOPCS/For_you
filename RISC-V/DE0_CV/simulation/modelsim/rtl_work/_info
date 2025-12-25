@@ -1,0 +1,311 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Magician/Desktop/RISC-V/DE0_CV/simulation/modelsim
+vcontroller
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1765723841
+!i10b 1
+!s100 9AKGAQC<RdoE<LAKMKkmL1
+I]aPVT]MbV[of9[zKOVn;S1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 controller_sv_unit
+S1
+R0
+w1764836186
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/controller.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/controller.sv
+L0 3
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1765723841.000000
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/controller.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design
+Z8 tCvgOpt 0
+vDE0_CV
+R1
+!s110 1765723846
+!i10b 1
+!s100 E@MBf][TYkQnB1]c8;NhZ3
+IKm<g_kO`T8O`83k[3fkVL2
+R3
+!s105 DE0_CV_sv_unit
+S1
+R0
+w1763628224
+8../../design/DE0_CV.sv
+F../../design/DE0_CV.sv
+L0 6
+R4
+r1
+!s85 0
+31
+Z9 !s108 1765723845.000000
+!s107 ../../design/DE0_CV.sv|
+!s90 -reportprogress|300|../../design/DE0_CV.sv|
+!i113 1
+R8
+n@d@e0_@c@v
+vDIV
+R1
+R2
+!i10b 1
+!s100 <_@@6LVjfj?NF9H5B=fPJ3
+I1Sd:7ZNhOabXG9_HE8>753
+R3
+!s105 DIV_sv_unit
+S1
+R0
+w1764831048
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv|
+!i113 1
+R6
+R7
+R8
+n@d@i@v
+vINST_DEC
+R1
+R2
+!i10b 1
+!s100 hRgK4zX?R^48D;YFNhPX82
+I_DWYMRXZEUd=kM[Jjd[`21
+R3
+!s105 INST_DEC_sv_unit
+S1
+R0
+w1764225460
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv|
+!i113 1
+R6
+R7
+R8
+n@i@n@s@t_@d@e@c
+vMUL
+R1
+R2
+!i10b 1
+!s100 Mj]dKmb=NUnPZEXJiWPnE3
+InHNUKiMbV=ZB@oINIfCYj3
+R3
+!s105 MUL_sv_unit
+S1
+R0
+w1764831010
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv|
+!i113 1
+R6
+R7
+R8
+n@m@u@l
+vmyalu
+R1
+R2
+!i10b 1
+!s100 Jb@OQ5D8H@mi5MZ4:hX8<1
+IXg4mgj`3zI0NZ5N;V2jV92
+R3
+!s105 myalu_sv_unit
+S1
+R0
+w1761213448
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/myalu.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/myalu.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/myalu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/myalu.sv|
+!i113 1
+R6
+R7
+R8
+vmycpu
+R1
+Z10 !s110 1765723845
+!i10b 1
+!s100 hDcI@2c>MSHMWiHRP1h5F2
+ILC6WDzH:DJbD9EVVd8C[F3
+R3
+!s105 mycpu_sv_unit
+S1
+R0
+w1765437164
+8../../design/mycpu.sv
+F../../design/mycpu.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R9
+!s107 ..\..\design\mydefine.sv|../../design/mycpu.sv|
+!s90 -reportprogress|300|../../design/mycpu.sv|
+!i113 1
+R8
+vmylsu
+R1
+R2
+!i10b 1
+!s100 O5XD>h22gYUY`WcZ9cF;O3
+I0cjef3H:TZ;gVBgAnNKaO1
+R3
+!s105 mylsu_sv_unit
+S1
+R0
+w1764230254
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv|
+!i113 1
+R6
+R7
+R8
+vProgram_Rom
+R1
+R2
+!i10b 1
+!s100 =l0iHD9R`Bj^h58^HR;YB3
+IUIZ9]m>2FU4TZ]7WG^<AN1
+R3
+!s105 Program_Rom_sv_unit
+S1
+R0
+w1765700248
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Program_Rom.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Program_Rom.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Program_Rom.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Program_Rom.sv|
+!i113 1
+R6
+R7
+R8
+n@program_@rom
+vRAM
+R1
+!s110 1765723840
+!i10b 1
+!s100 AHHlNfN@acZ2gAVB=GG8K0
+IFkS7I4TKnYh9aAioeNRnN3
+R3
+!s105 RAM_sv_unit
+S1
+R0
+w1764230862
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/RAM.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/RAM.sv
+L0 2
+R4
+r1
+!s85 0
+31
+Z11 !s108 1765723840.000000
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/RAM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/RAM.sv|
+!i113 1
+R6
+R7
+R8
+n@r@a@m
+vReg_file
+R1
+R2
+!i10b 1
+!s100 AEDknae:96`zW7l7;Oe@>0
+IdU;OQ5KdKXjP]j:8BXDUa2
+R3
+!s105 Reg_file_sv_unit
+S1
+R0
+w1762417510
+8C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Reg_file.sv
+FC:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Reg_file.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Reg_file.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design|C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Reg_file.sv|
+!i113 1
+R6
+R7
+R8
+n@reg_file
+vtestbench
+R1
+R10
+!i10b 1
+!s100 3k[maBi:2f7e9AdE:l4:11
+IRQbk0?F>G3?ZAKQLWbC_X1
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1765700411
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R9
+!s107 ../tb/testbench.sv|
+!s90 -reportprogress|300|../tb/testbench.sv|
+!i113 1
+R8

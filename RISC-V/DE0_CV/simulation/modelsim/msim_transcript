@@ -1,0 +1,532 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE0_CV_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/RAM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:40 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/RAM.sv 
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	RAM
+# End time: 22:50:40 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Reg_file.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:40 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Reg_file.sv 
+# -- Compiling module Reg_file
+# 
+# Top level modules:
+# 	Reg_file
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Program_Rom.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mydefine.sv 
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv 
+# -- Compiling module MUL
+# 
+# Top level modules:
+# 	MUL
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv 
+# -- Compiling module DIV
+# 
+# Top level modules:
+# 	DIV
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv 
+# -- Compiling module mylsu
+# 
+# Top level modules:
+# 	mylsu
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mycpu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mycpu.sv 
+# -- Compiling module mycpu
+# 
+# Top level modules:
+# 	mycpu
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/myalu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/myalu.sv 
+# -- Compiling module myalu
+# 
+# Top level modules:
+# 	myalu
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv 
+# -- Compiling module INST_DEC
+# 
+# Top level modules:
+# 	INST_DEC
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design {C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:41 on Dec 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Magician/Desktop/RISC-V/DE0_CV/design" C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 22:50:41 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:45 on Dec 14,2025
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 22:50:45 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:45 on Dec 14,2025
+# vlog -reportprogress 300 ../../design/mycpu.sv 
+# -- Compiling module mycpu
+# 
+# Top level modules:
+# 	mycpu
+# End time: 22:50:45 on Dec 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:50:45 on Dec 14,2025
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 22:50:46 on Dec 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+do sim.do
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 22:50:47 on Dec 14,2025
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.mycpu
+# Loading work.Program_Rom
+# Loading work.INST_DEC
+# Loading work.Reg_file
+# Loading work.controller
+# Loading work.myalu
+# Loading work.MUL
+# Loading work.DIV
+# Loading work.mylsu
+# Loading work.RAM
+# ** Warning: (vsim-3017) ../tb/testbench.sv(6): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu File: ../../design/mycpu.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'regs_31'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 301  Hostname: 301-B-10  ProcessID: 124
+#           Attempting to use alternate WLF file "./wlftwhwwaq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwhwwaq
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(176): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(44): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) ../../design/mycpu.sv(172): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv(28): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/cpu/myinst_dec
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(44): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(102): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 130 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 150 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(176): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ns  Iteration: 3  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(176): No condition is true in the unique/priority if/case statement.
+#    Time: 170 ns  Iteration: 3  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 190 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 210 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 230 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 230 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 230 ns  Iteration: 3  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 250 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 270 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 290 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 370 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 390 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 410 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 430 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 450 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 470 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 490 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 510 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 550 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 570 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 570 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 590 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 610 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 630 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 670 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 690 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 690 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 690 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 710 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 730 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 750 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 790 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 810 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 810 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 810 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 830 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 850 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 870 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 910 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 930 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 930 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 930 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 950 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 970 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 990 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1030 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1050 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 1050 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1070 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1090 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1110 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1150 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1170 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 1170 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1170 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1190 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1230 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(176): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(176): No condition is true in the unique/priority if/case statement.
+#    Time: 1250 ns  Iteration: 5  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1270 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1310 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1330 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1350 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1390 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1410 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1430 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1450 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/INST_DEC.sv(28): No condition is true in the unique/priority if/case statement.
+#    Time: 1470 ns  Iteration: 2  Instance: /testbench/cpu/myinst_dec
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1490 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1510 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1530 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1590 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1610 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1630 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1650 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1670 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 1670 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1670 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1690 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1710 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1730 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1770 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1790 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 1790 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1790 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1810 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1830 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1850 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1890 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 1910 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 1910 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1930 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1950 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 1970 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2010 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2030 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2030 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2030 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2050 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2070 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2090 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2130 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2150 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2150 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2150 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2170 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2190 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2210 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2250 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2270 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2270 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2270 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2290 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2310 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2330 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2370 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2390 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2390 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2410 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2430 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2450 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2490 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2510 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2510 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2510 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2530 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2550 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2570 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2610 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2630 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2630 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2630 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2650 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2670 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2690 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2730 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2750 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2750 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2750 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2770 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2790 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2810 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2850 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2870 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2870 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2890 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2910 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2930 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 2970 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2990 ns  Iteration: 2  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/MUL.sv(12): No condition is true in the unique/priority if/case statement.
+#    Time: 2990 ns  Iteration: 2  Instance: /testbench/cpu/myMul
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/mylsu.sv(100): No condition is true in the unique/priority if/case statement.
+#    Time: 2990 ns  Iteration: 4  Instance: /testbench/cpu/lsu1
+# ** Warning: (vsim-8315) C:/Users/Magician/Desktop/RISC-V/DE0_CV/design/DIV.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 3010 ns  Iteration: 2  Instance: /testbench/cpu/myDiv
+# ** Note: $stop    : ../tb/testbench.sv(16)
+#    Time: 3020 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 16
+# End time: 22:51:16 on Dec 14,2025, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 182

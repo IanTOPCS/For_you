@@ -1,0 +1,14 @@
+{
+  "name": "MySQL 8 Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "mysql",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Oracle.mysql-shell-for-vs-code"
+      ]
+    }
+  },
+  "postCreateCommand": "mysqlsh --version || echo 'mysql-shell not found'"
+}

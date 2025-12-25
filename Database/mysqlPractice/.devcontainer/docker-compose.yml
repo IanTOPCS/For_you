@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mysql:
+    build: .
+    container_name: mysql-dev
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: practice
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../..:/workspaces:cached
