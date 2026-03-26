@@ -1,0 +1,1 @@
+1. uart1 print 不能用 => 特化LCD, 顯示螢幕長寬(240*320)使用showNum(template提供)
