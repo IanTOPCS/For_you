@@ -1,16 +1,15 @@
 #include "usmart.h"
 #include "usmart_str.h"
 ////////////////////////////�Τ�t�m��///////////////////////////////////////////////
-//�o�U���n�]�t�ҥΨ쪺��Ʃҥө����Y���(�Τ�ۤv�K�[) 
+//�o�U���n�]�t�ҥΨ쪺��?�ҥө����Y���?(�Τ�ۤv�K�[) 
 #include "delay.h"		
 #include "sys.h"
 #include "lcd.h"
 #include "touch.h"
+# include "myDrawBigPoint.h"
 												 
-extern void led_set(u8 sta);
-extern void test_fun(void(*ledset)(u8),u8 sta);
-//��ƦW�C����l��(�Τ�ۤv�K�[)
-//�Τ᪽���b�o�̿�J�n���檺��ƦW�Ψ�d���
+//��?�W�C����l��(�Τ�ۤv�K�[)
+//�Τ᪽���b�o�̿�J�n���檺��?�W�Ψ�d���?
 struct _m_usmart_nametab usmart_nametab[]=
 {
 #if USMART_USE_WRFUNS==1 	//�p�G�ϯ�FŪ�g�ާ@
@@ -30,14 +29,21 @@ struct _m_usmart_nametab usmart_nametab[]=
 	(void*)LCD_ReadPoint,"u16 LCD_ReadPoint(u16 x,u16 y)",							 
 	(void*)LCD_Display_Dir,"void LCD_Display_Dir(u8 dir)",
 	(void*)LCD_ShowxNum,"void LCD_ShowxNum(u16 x,u16 y,u32 num,u8 len,u8 size,u8 mode)",
-	(void*)led_set,"void led_set(u8 sta)",
-	(void*)test_fun,"void test_fun(void(*ledset)(u8),u8 sta)",
-	(void*)TP_Draw_Big_Point, "void TP_Draw_Big_Point(u16 x,u16 y,u16 color)"				  	    
+	// my function
+	(void*)drawPointOnLCD, "void drawPointOnLCD(void)",
+	(void*)drawHaloCircle, "void drawHaloCircle(void)",
+	(void*)drawOnLCD, "void drawOnLCD(void)",
+	(void*)printGrid, "void printGrid(void)",
+	(void*)clearPaint, "void clearPaint(void)",
+	(u16*)calColor, "u16 calColor(u16 x, u16 y)",
+	(void*)showAllColor, "void showAllColor(void)",
+	(void*)changeColor, "void changeColor(bool mode)",
+	(void*)movePaint, "void movePaint(bool)",
 };						  
 ///////////////////////////////////END///////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
-//��Ʊ���޲z����l��
-//�o��U�Ө�����ƪ��W�r
+//��?����޲z����l��
+//�o��U�Ө�����?���W�r
 //�o�����`�ƶq
 struct _m_usmart_dev usmart_dev=
 {
@@ -46,13 +52,13 @@ struct _m_usmart_dev usmart_dev=
 	usmart_cmd_rec,
 	usmart_exe,
 	usmart_scan,
-	sizeof(usmart_nametab)/sizeof(struct _m_usmart_nametab),//��Ƽƶq
+	sizeof(usmart_nametab)/sizeof(struct _m_usmart_nametab),//��?�ƶq
 	0,	  	//�ѼƼƶq
 	0,	 	//���ID
-	1,		//�Ѽ��������,0,10�i��;1,16�i��
+	1,		//�Ѽ��������?,0,10�i��;1,16�i��
 	0,		//�Ѽ�����.bitx:,0,�Ʀr;1,�r�Ŧ�	    
 	0,	  	//�C�ӰѼƪ����׼Ȧs��,�ݭnMAX_PARM��0��l��
-	0,		//��ƪ��Ѽ�,�ݭnPARM_LEN��0��l��
+	0,		//��?���Ѽ�,�ݭnPARM_LEN��0��l��
 };   
 
 

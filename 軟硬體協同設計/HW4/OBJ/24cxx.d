@@ -4,7 +4,7 @@
 ..\obj\24cxx.o: ..\SYSTEM\sys\sys.h
 ..\obj\24cxx.o: ..\USER\stm32f4xx.h
 ..\obj\24cxx.o: ..\CORE\core_cm4.h
-..\obj\24cxx.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdint.h
+..\obj\24cxx.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdint.h
 ..\obj\24cxx.o: ..\CORE\core_cmInstr.h
 ..\obj\24cxx.o: ..\CORE\core_cmFunc.h
 ..\obj\24cxx.o: ..\CORE\core_cm4_simd.h

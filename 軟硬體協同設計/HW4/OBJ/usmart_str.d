@@ -2,7 +2,7 @@
 ..\obj\usmart_str.o: ..\USMART\usmart_str.h
 ..\obj\usmart_str.o: ..\USER\stm32f4xx.h
 ..\obj\usmart_str.o: ..\CORE\core_cm4.h
-..\obj\usmart_str.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdint.h
+..\obj\usmart_str.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdint.h
 ..\obj\usmart_str.o: ..\CORE\core_cmInstr.h
 ..\obj\usmart_str.o: ..\CORE\core_cmFunc.h
 ..\obj\usmart_str.o: ..\CORE\core_cm4_simd.h

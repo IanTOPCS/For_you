@@ -3,7 +3,7 @@
 ..\obj\ft5206.o: ..\SYSTEM\sys\sys.h
 ..\obj\ft5206.o: ..\USER\stm32f4xx.h
 ..\obj\ft5206.o: ..\CORE\core_cm4.h
-..\obj\ft5206.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdint.h
+..\obj\ft5206.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdint.h
 ..\obj\ft5206.o: ..\CORE\core_cmInstr.h
 ..\obj\ft5206.o: ..\CORE\core_cmFunc.h
 ..\obj\ft5206.o: ..\CORE\core_cm4_simd.h
@@ -41,6 +41,6 @@
 ..\obj\ft5206.o: ..\HARDWARE\TOUCH\gt9147.h
 ..\obj\ft5206.o: ..\HARDWARE\TOUCH\ctiic.h
 ..\obj\ft5206.o: ..\SYSTEM\usart\usart.h
-..\obj\ft5206.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdio.h
+..\obj\ft5206.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdio.h
 ..\obj\ft5206.o: ..\SYSTEM\delay\delay.h
-..\obj\ft5206.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\string.h
+..\obj\ft5206.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\string.h

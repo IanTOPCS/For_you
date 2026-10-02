@@ -83,23 +83,23 @@ ARM Macro Assembler    Page 2
    49 00000400         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
    50 00000400         ; </h>
    51 00000400         
-   52 00000400 00000200 
+   52 00000400 00015000 
                        Heap_Size
-                               EQU              0x00000200
+                               EQU              0x00015000
    53 00000400         
    54 00000400                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
 3
    55 00000000         __heap_base
    56 00000000         Heap_Mem
                                SPACE            Heap_Size
-   57 00000200         __heap_limit
-   58 00000200         
-   59 00000200                 PRESERVE8
-   60 00000200                 THUMB
-   61 00000200         
-   62 00000200         
-   63 00000200         ; Vector Table Mapped to Address 0 at Reset
-   64 00000200                 AREA             RESET, DATA, READONLY
+   57 00015000         __heap_limit
+   58 00015000         
+   59 00015000                 PRESERVE8
+   60 00015000                 THUMB
+   61 00015000         
+   62 00015000         
+   63 00015000         ; Vector Table Mapped to Address 0 at Reset
+   64 00015000                 AREA             RESET, DATA, READONLY
    65 00000000                 EXPORT           __Vectors
    66 00000000                 EXPORT           __Vectors_End
    67 00000000                 EXPORT           __Vectors_Size
@@ -865,14 +865,13 @@ ARM Macro Assembler    Page 14
               00000000 
               00000000 
               00000400 
-              00000200 
+              00015000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
 interwork --depend=..\obj\startup_stm32f40_41xxx.d -o..\obj\startup_stm32f40_41
-xxx.o -IC:\Users\Leisurely_Hermit\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\3.
-1.1\Device\Include --predefine="__UVISION_VERSION SETA 543" --predefine="STM32F
-407xx SETA 1" --list=..\obj\startup_stm32f40_41xxx.lst ..\CORE\startup_stm32f40
-_41xxx.s
+xxx.o -IC:\Users\Magician\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\3.0.0\Devi
+ce\Include --predefine="__UVISION_VERSION SETA 542" --predefine="STM32F407xx SE
+TA 1" --list=..\obj\startup_stm32f40_41xxx.lst ..\CORE\startup_stm32f40_41xxx.s
 
 
 
@@ -936,7 +935,7 @@ Symbol: __heap_base
    Uses
       None
 Comment: __heap_base unused
-__heap_limit 00000200
+__heap_limit 00015000
 
 Symbol: __heap_limit
    Definitions
@@ -1927,7 +1926,7 @@ Comment: __user_initial_stackheap used once
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Absolute symbols
 
-Heap_Size 00000200
+Heap_Size 00015000
 
 Symbol: Heap_Size
    Definitions

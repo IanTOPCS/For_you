@@ -3,7 +3,7 @@
 ..\obj\usmart.o: ..\USMART\usmart_str.h
 ..\obj\usmart.o: ..\USER\stm32f4xx.h
 ..\obj\usmart.o: ..\CORE\core_cm4.h
-..\obj\usmart.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdint.h
+..\obj\usmart.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdint.h
 ..\obj\usmart.o: ..\CORE\core_cmInstr.h
 ..\obj\usmart.o: ..\CORE\core_cmFunc.h
 ..\obj\usmart.o: ..\CORE\core_cm4_simd.h
@@ -37,5 +37,5 @@
 ..\obj\usmart.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 ..\obj\usmart.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\usmart.o: ..\SYSTEM\usart\usart.h
-..\obj\usmart.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdio.h
+..\obj\usmart.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdio.h
 ..\obj\usmart.o: ..\SYSTEM\sys\sys.h

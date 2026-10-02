@@ -1,7 +1,7 @@
 ..\obj\system_stm32f4xx.o: system_stm32f4xx.c
 ..\obj\system_stm32f4xx.o: stm32f4xx.h
 ..\obj\system_stm32f4xx.o: ..\CORE\core_cm4.h
-..\obj\system_stm32f4xx.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdint.h
+..\obj\system_stm32f4xx.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdint.h
 ..\obj\system_stm32f4xx.o: ..\CORE\core_cmInstr.h
 ..\obj\system_stm32f4xx.o: ..\CORE\core_cmFunc.h
 ..\obj\system_stm32f4xx.o: ..\CORE\core_cm4_simd.h

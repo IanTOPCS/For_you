@@ -2,7 +2,7 @@
 ..\obj\stm32f4xx_usart.o: ..\FWLIB\inc\stm32f4xx_usart.h
 ..\obj\stm32f4xx_usart.o: ..\USER\stm32f4xx.h
 ..\obj\stm32f4xx_usart.o: ..\CORE\core_cm4.h
-..\obj\stm32f4xx_usart.o: C:\Users\Leisurely_Hermit\AppData\Local\Keil_v5\ARM\ARMCompiler506u7\Bin\..\include\stdint.h
+..\obj\stm32f4xx_usart.o: C:\Users\Magician\AppData\Local\Keil_v5\ARM\ARMCOMPILER506\Bin\..\include\stdint.h
 ..\obj\stm32f4xx_usart.o: ..\CORE\core_cmInstr.h
 ..\obj\stm32f4xx_usart.o: ..\CORE\core_cmFunc.h
 ..\obj\stm32f4xx_usart.o: ..\CORE\core_cm4_simd.h
